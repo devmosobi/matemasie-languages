@@ -20,6 +20,15 @@ Format de `catalog.json` (adresses relatives à celle du catalogue) :
 
 Limites appliquées par l'application : catalogue de 256 Ko, fichier de langue de 2 Mo, signature de 1 Ko.
 
+## Français et anglais : `reference/`
+
+`reference/en.json` (langue de référence) et `reference/fr.json` sont des copies des langues intégrées à l'application, mises à jour à chaque version de test. Elles ne figurent pas dans `catalog.json` : l'application refuse d'installer depuis le catalogue une langue qu'elle intègre déjà. Elles servent :
+
+- de point de départ pour une nouvelle traduction (partir de `reference/en.json`) ;
+- à proposer des corrections du français ou de l'anglais par demande de fusion sur ces fichiers ; MOSOBI les reporte ensuite dans l'application.
+
+Version actuelle des copies : Matemasie 0.12.5.
+
 ## Vérifiée ou non vérifiée
 
 Une langue dont la signature correspond à la clé publique de MOSOBI intégrée à l'application s'affiche « vérifiée ». Une langue sans signature, ou modifiée après sa signature, s'installe « non vérifiée ». Les fichiers sont toujours contrôlés avant usage : textes affichés comme du texte, sans balisage, variables identiques à l'anglais.
@@ -44,4 +53,4 @@ La commande signale si la clé ne correspond pas à la clé publique intégrée 
 
 # Matemasie community languages
 
-Public catalog of community translations for the Matemasie app by MOSOBI. The app reads it only when the user turns on "Community catalog" in Settings, and sends no data. Files signed by MOSOBI (Ed25519) are shown as "verified"; unsigned or modified files install as "unverified". To propose a translation, open a pull request adding `<code>.json`; MOSOBI signs it and adds it to `catalog.json` after review.
+Public catalog of community translations for the Matemasie app by MOSOBI. The app reads it only when the user turns on "Community catalog" in Settings, and sends no data. Files signed by MOSOBI (Ed25519) are shown as "verified"; unsigned or modified files install as "unverified". To propose a translation, start from `reference/en.json` and open a pull request adding `<code>.json`; MOSOBI signs it and adds it to `catalog.json` after review. Corrections to English or French go to `reference/`, and MOSOBI carries them over into the app.
