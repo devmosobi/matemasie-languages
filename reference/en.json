@@ -784,6 +784,44 @@
     },
     "browseButton": "Choose a plum.sqlite file...",
     "browseDescription": "Manually choose a Sticky Notes plum.sqlite database",
+    "browsers": {
+      "chooseFileDescription": "Open the file picker to choose a browser's CSV password export",
+      "csvWarning": "This CSV file contains your passwords in clear text: anyone or any program with access to it can read them. After the import, Matemasie will offer to delete it.",
+      "erase": {
+        "kept": "The CSV file is kept. It contains your passwords in clear text: store it somewhere safe or delete it as soon as possible, along with any copies (Downloads, OneDrive or other cloud storage, recycle bin).",
+        "overwrite": "Permanently delete the CSV file? It contains your passwords in clear text. Its content is first overwritten with random data, then the file is deleted. On an SSD or a journaling file system, copies of the old data may remain: erasure is not guaranteed. If the folder is synced by OneDrive or other cloud storage, a copy may remain in its recycle bin or version history: delete it too.",
+        "providerDelete": "Delete the CSV file? It contains your passwords in clear text. Android does not allow overwriting the content of a chosen document: the file is deleted by the app that manages it (Files, cloud storage...), which may keep a copy. Erasure is not guaranteed.",
+        "unavailable": "The app that manages this file does not let Matemasie delete it. It contains your passwords in clear text: delete it yourself from the Files app, then empty its trash."
+      },
+      "error": {
+        "malformedRow": "CSV line whose number of columns differs from the header: not imported.",
+        "writeFailed": "This entry could not be imported. The technical details are in the log."
+      },
+      "failure": {
+        "fileTooLarge": "This file is too large to be a password export (64 MiB at most).",
+        "invalidFormat": "This file is not a recognized password export (Chrome, Edge, Brave, Opera, Vivaldi, Firefox or Safari), or it is damaged. No data was imported.",
+        "other": "This file cannot be imported. No data was imported."
+      },
+      "fileIntro": "Choose the .csv file exported by your browser. It is read directly, without a copy.",
+      "intro": {
+        "android": "On Android, Chrome offers the same export: Settings > Password Manager > Settings > Export passwords.",
+        "chrome": "Chrome, Brave, Opera, Vivaldi: Password Manager > Settings > Export passwords.",
+        "clear": "The exported file contains your passwords in clear text. Matemasie reads it without copying it, then offers to delete it.",
+        "edge": "Edge: Settings > Profiles > Passwords, then the \"...\" menu > Export passwords.",
+        "export": "First export your passwords from your browser. Matemasie never reads browser data directly: only the exported file is imported.",
+        "firefox": "Firefox: open about:logins, then the \"...\" menu > Export.",
+        "safari": "Safari on Mac: File > Export > Passwords.",
+        "sensitive": "All imported records will be sensitive notes of type Login, tagged import-chromium, import-firefox or import-safari. An entry already in Matemasie (same site, same username, same password) is not created again, and importing the same file again creates no duplicate."
+      },
+      "pickerTitle": "Choose a browser's password export (.csv)",
+      "previewCounts": "{created, plural, one {# record to create} other {# records to create}}, {existing, plural, one {# already imported} other {# already imported}}, {duplicates, plural, one {# duplicate entry skipped} other {# duplicate entries skipped}}.",
+      "source": "browser",
+      "title": "Import from a browser",
+      "warning": {
+        "duplicatesSkipped": "{count, plural, one {# entry is identical (same site, same username, same password) to a record already present or to another entry of the file: it is not created again.} other {# entries are identical (same site, same username, same password) to records already present or to other entries of the file: they are not created again.}}",
+        "other": "{count, plural, one {# entry has a warning.} other {# entries have a warning.}}"
+      }
+    },
     "button": "Import selection",
     "buttonDescription": "Import the selected notes with the chosen options",
     "detected": "Sticky Notes database found on this PC.",
@@ -864,7 +902,6 @@
         "rtsz": "Partial route: the .rtsz document. Connections, folders and options are imported, but not the passwords: Royal TS encrypts them in an undocumented way. You will have to re-enter them in Matemasie.",
         "sensitive": "All imported records will be sensitive notes, tagged import-royal-ts and with their folder path as a tag. A new import of the same file does not create duplicates."
       },
-      "line": "Line {line}",
       "pickerTitle": "Choose a CSV export or a Royal TS document (.csv, .rtsz)",
       "secretsToReenterHelp": "Royal TS encrypts the passwords of the .rtsz document in an undocumented way: open each record and enter its password, or import the CSV export of these connections instead.",
       "secretsToReenterLabel": "Records whose password must be re-entered",
@@ -932,6 +969,7 @@
       "importFailed": "The import failed. The technical details are recorded in the log.",
       "importLocked": "Import stopped: sensitive notes were locked. Records already imported are kept; start the import again to finish.",
       "importing": "{count, plural, one {Importing # item...} other {Importing # items...}}",
+      "line": "Line {line}",
       "listDescription": "Items found in the file; check an item to import it",
       "localChanges": "Records changed in Matemasie since the last import are not checked: they stay as they are. Check one to replace it with its {source} version (a revision keeps the Matemasie version).",
       "readCancelled": "Reading cancelled. No data was imported.",
@@ -1364,6 +1402,7 @@
     "hideFilters": "Hide filters",
     "import": "Import from Sticky Notes...",
     "importBitwarden": "Import from Bitwarden...",
+    "importBrowsers": "Import from a browser...",
     "importRoyalTs": "Import from Royal TS...",
     "lockNow": "Lock Matemasie",
     "manageTags": "Manage tags...",
@@ -2693,6 +2732,8 @@
       "loadFailed": "The list of devices could not be read. Try again later.",
       "neverSynced": "Never synced",
       "offlineRevocationWarning": "Without cloud storage, a removed device only receives the erase order if it connects to this folder or this network again. Data created after the removal stays unreadable to it in any case.",
+      "refreshFailed": "The list could not be updated from the storage: it shows the devices known here.",
+      "refreshing": "Updating the list...",
       "section": "Devices",
       "title": "Sync and devices",
       "unknownPlatform": "Unknown platform",

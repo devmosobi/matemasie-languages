@@ -784,6 +784,44 @@
     },
     "browseButton": "Choisir un fichier plum.sqlite...",
     "browseDescription": "Choisir manuellement une base Sticky Notes plum.sqlite",
+    "browsers": {
+      "chooseFileDescription": "Ouvrir le sélecteur de fichiers pour choisir l'export CSV des mots de passe d'un navigateur",
+      "csvWarning": "Ce fichier CSV contient vos mots de passe en clair : toute personne ou tout programme qui y accède peut les lire. Après l'import, Matemasie vous proposera de le supprimer.",
+      "erase": {
+        "kept": "Le fichier CSV est conservé. Il contient vos mots de passe en clair : rangez-le en lieu sûr ou supprimez-le dès que possible, ainsi que ses copies éventuelles (Téléchargements, OneDrive ou autre stockage en ligne, corbeille).",
+        "overwrite": "Supprimer définitivement le fichier CSV ? Il contient vos mots de passe en clair. Son contenu est d'abord écrasé par des données aléatoires, puis le fichier est supprimé. Sur un SSD ou un système de fichiers journalisé, des copies des anciennes données peuvent subsister : l'effacement n'est pas garanti. Si le dossier est synchronisé par OneDrive ou un autre stockage en ligne, une copie peut rester dans sa corbeille ou son historique des versions : supprimez-la aussi.",
+        "providerDelete": "Supprimer le fichier CSV ? Il contient vos mots de passe en clair. Android ne permet pas d'écraser le contenu d'un document choisi : le fichier est supprimé par l'application qui le gère (Fichiers, stockage en ligne...), qui peut en garder une copie. L'effacement n'est pas garanti.",
+        "unavailable": "L'application qui gère ce fichier ne permet pas à Matemasie de le supprimer. Il contient vos mots de passe en clair : supprimez-le vous-même depuis l'application Fichiers, puis videz sa corbeille."
+      },
+      "error": {
+        "malformedRow": "Ligne de CSV au nombre de colonnes différent de l'en-tête : non importée.",
+        "writeFailed": "Cette entrée n'a pas pu être importée. Le détail technique est consigné dans le journal."
+      },
+      "failure": {
+        "fileTooLarge": "Ce fichier est trop volumineux pour être un export de mots de passe (64 Mio au plus).",
+        "invalidFormat": "Ce fichier n'est pas un export de mots de passe reconnu (Chrome, Edge, Brave, Opera, Vivaldi, Firefox ou Safari), ou il est endommagé. Aucune donnée n'a été importée.",
+        "other": "Ce fichier ne peut pas être importé. Aucune donnée n'a été importée."
+      },
+      "fileIntro": "Choisissez le fichier .csv exporté par votre navigateur. Il est lu directement, sans copie.",
+      "intro": {
+        "android": "Sur Android, Chrome propose le même export : Paramètres > Gestionnaire de mots de passe > Paramètres > Exporter les mots de passe.",
+        "chrome": "Chrome, Brave, Opera, Vivaldi : Gestionnaire de mots de passe > Paramètres > Exporter les mots de passe.",
+        "clear": "Le fichier exporté contient vos mots de passe en clair. Matemasie le lit sans le copier, puis vous propose de le supprimer.",
+        "edge": "Edge : Paramètres > Profils > Mots de passe, puis le menu « ... » > Exporter les mots de passe.",
+        "export": "Exportez d'abord vos mots de passe depuis votre navigateur. Matemasie ne lit jamais directement les données des navigateurs : seul le fichier exporté est importé.",
+        "firefox": "Firefox : ouvrez about:logins, puis le menu « ... » > Exporter.",
+        "safari": "Safari sur Mac : Fichier > Exporter > Mots de passe.",
+        "sensitive": "Toutes les fiches importées seront des notes sensibles de type Identifiant, avec le tag import-chromium, import-firefox ou import-safari. Une entrée déjà présente dans Matemasie (même site, même identifiant, même mot de passe) n'est pas recréée, et un nouvel import du même fichier ne crée pas de doublon."
+      },
+      "pickerTitle": "Choisir l'export des mots de passe d'un navigateur (.csv)",
+      "previewCounts": "{created, plural, one {# fiche à créer} other {# fiches à créer}}, {existing, plural, one {# déjà importée} other {# déjà importées}}, {duplicates, plural, one {# entrée en double ignorée} other {# entrées en double ignorées}}.",
+      "source": "votre navigateur",
+      "title": "Importer depuis un navigateur",
+      "warning": {
+        "duplicatesSkipped": "{count, plural, one {# entrée est identique (même site, même identifiant, même mot de passe) à une fiche déjà présente ou à une autre entrée du fichier : elle n'est pas recréée.} other {# entrées sont identiques (même site, même identifiant, même mot de passe) à des fiches déjà présentes ou à d'autres entrées du fichier : elles ne sont pas recréées.}}",
+        "other": "{count, plural, one {# entrée a fait l'objet d'un avertissement.} other {# entrées ont fait l'objet d'un avertissement.}}"
+      }
+    },
     "button": "Importer la sélection",
     "buttonDescription": "Importer les notes sélectionnées avec les options choisies",
     "detected": "Base Sticky Notes détectée sur ce PC.",
@@ -864,7 +902,6 @@
         "rtsz": "Voie partielle : le document .rtsz. Connexions, dossiers et options sont repris, mais pas les mots de passe : Royal TS les chiffre d'une façon non documentée. Ils seront à ressaisir dans Matemasie.",
         "sensitive": "Toutes les fiches importées seront des notes sensibles, avec le tag import-royal-ts et le chemin de leur dossier en tag. Un nouvel import du même fichier ne crée pas de doublon."
       },
-      "line": "Ligne {line}",
       "pickerTitle": "Choisir un export CSV ou un document Royal TS (.csv, .rtsz)",
       "secretsToReenterHelp": "Royal TS chiffre les mots de passe du document .rtsz d'une façon non documentée : ouvrez chaque fiche et saisissez son mot de passe, ou importez l'export CSV de ces connexions à la place.",
       "secretsToReenterLabel": "Fiches dont le mot de passe est à ressaisir",
@@ -932,6 +969,7 @@
       "importFailed": "L'import a échoué. Le détail technique est consigné dans le journal.",
       "importLocked": "Import arrêté : les notes sensibles ont été verrouillées. Les fiches déjà importées sont conservées ; relancez l'import pour terminer.",
       "importing": "{count, plural, one {Import de # élément en cours...} other {Import de # éléments en cours...}}",
+      "line": "Ligne {line}",
       "listDescription": "Éléments trouvés dans le fichier ; cocher un élément pour l'importer",
       "localChanges": "Les fiches modifiées dans Matemasie depuis le dernier import ne sont pas cochées : elles restent telles quelles. Cochez-en une pour la remplacer par sa version de {source} (une révision garde la version de Matemasie).",
       "readCancelled": "Lecture annulée. Aucune donnée n'a été importée.",
@@ -1364,6 +1402,7 @@
     "hideFilters": "Masquer les filtres",
     "import": "Importer depuis Sticky Notes...",
     "importBitwarden": "Importer depuis Bitwarden...",
+    "importBrowsers": "Importer depuis un navigateur...",
     "importRoyalTs": "Importer depuis Royal TS...",
     "lockNow": "Verrouiller Matemasie",
     "manageTags": "Gérer les tags...",
@@ -2693,6 +2732,8 @@
       "loadFailed": "La liste des appareils n'a pas pu être lue. Réessayez plus tard.",
       "neverSynced": "Jamais synchronisé",
       "offlineRevocationWarning": "Sans stockage cloud, un appareil retiré ne reçoit l'ordre d'effacement que s'il se connecte à nouveau à ce dossier ou à ce réseau. Les données créées après le retrait lui restent illisibles dans tous les cas.",
+      "refreshFailed": "La liste n'a pas pu être mise à jour depuis le stockage : elle montre les appareils connus ici.",
+      "refreshing": "Mise à jour de la liste...",
       "section": "Appareils",
       "title": "Synchronisation et appareils",
       "unknownPlatform": "Plateforme inconnue",

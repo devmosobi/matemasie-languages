@@ -27,7 +27,11 @@ Limites appliquées par l'application : catalogue de 256 Ko, fichier de langue d
 - de point de départ pour une nouvelle traduction (partir de `reference/en.json`) ;
 - à proposer des corrections du français ou de l'anglais par demande de fusion sur ces fichiers ; MOSOBI les reporte ensuite dans l'application.
 
-Version actuelle des copies : Matemasie 0.12.5.
+Version actuelle des copies : Matemasie 0.12.6.
+
+## Licence
+
+Les fichiers de ce dépôt sont publiés sous licence MIT (fichier `LICENSE`). Une contribution proposée par demande de fusion est faite sous cette même licence.
 
 ## Vérifiée ou non vérifiée
 
