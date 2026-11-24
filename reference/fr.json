@@ -1400,10 +1400,7 @@
     "delete": "Supprimer",
     "export": "Exporter en Markdown...",
     "hideFilters": "Masquer les filtres",
-    "import": "Importer depuis Sticky Notes...",
-    "importBitwarden": "Importer depuis Bitwarden...",
-    "importBrowsers": "Importer depuis un navigateur...",
-    "importRoyalTs": "Importer depuis Royal TS...",
+    "import": "Importer...",
     "lockNow": "Verrouiller Matemasie",
     "manageTags": "Gérer les tags...",
     "pin": "Épingler",
@@ -2451,6 +2448,14 @@
       },
       "general": {
         "summary": "{platform, select, mobile {Confirmations, panneau de navigation} other {Raccourcis, démarrage, confirmations}}"
+      },
+      "import": {
+        "title": "Importer",
+        "summary": "Sticky Notes, Bitwarden, Royal TS, navigateurs",
+        "bitwarden": "Export JSON de Bitwarden, chiffré par mot de passe ou non",
+        "browsers": "Mots de passe exportés en CSV par Chrome, Edge, Firefox ou Safari",
+        "royalTs": "Connexions RDP et SSH d'un export CSV ou d'un document .rtsz",
+        "stickyNotes": "Notes de Microsoft Sticky Notes, avec leurs couleurs"
       },
       "notes": {
         "title": "Notes et stockage",
