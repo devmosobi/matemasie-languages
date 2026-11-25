@@ -2993,6 +2993,8 @@
       "invalidResponse": "Invalid sign-in response. Sign in again.",
       "network": "The sign-in service cannot be reached. Check the Internet connection, then try again.",
       "oneDriveHelp": "{platform, select, mobile {A Microsoft sign-in page opens in the browser. Matemasie only accesses its own app folder in OneDrive. Come back to Matemasie once signed in.} other {A Microsoft sign-in page opens in the browser. Matemasie only accesses its own app folder in OneDrive.}}",
+      "openInBrowser": "Sign-in page not showing? Open in the browser",
+      "openInBrowserHelp": "The same sign-in page opens in the browser. Once you have accepted the sign-in, come back to Matemasie.",
       "otherAccountButton": "Change account",
       "progress": "{platform, select, mobile {Signing in through the browser... Come back to Matemasie once signed in.} other {Signing in through the browser...}}",
       "required": "Sign in to the provider before continuing.",

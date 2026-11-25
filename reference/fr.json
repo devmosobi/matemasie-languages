@@ -2993,6 +2993,8 @@
       "invalidResponse": "Réponse de connexion invalide. Recommencez la connexion.",
       "network": "Service de connexion injoignable. Vérifiez la connexion Internet puis réessayez.",
       "oneDriveHelp": "{platform, select, mobile {Une page de connexion Microsoft s'ouvre dans le navigateur. Matemasie n'accède qu'à son propre dossier d'application dans OneDrive. Revenez à Matemasie une fois la connexion terminée.} other {Une page de connexion Microsoft s'ouvre dans le navigateur. Matemasie n'accède qu'à son propre dossier d'application dans OneDrive.}}",
+      "openInBrowser": "La page de connexion ne s'affiche pas ? Ouvrir dans le navigateur",
+      "openInBrowserHelp": "La même page de connexion s'ouvre dans le navigateur. Une fois la connexion acceptée, revenez dans Matemasie.",
       "otherAccountButton": "Changer de compte",
       "progress": "{platform, select, mobile {Connexion en cours dans le navigateur... Revenez à Matemasie une fois la connexion terminée.} other {Connexion en cours dans le navigateur...}}",
       "required": "Connectez-vous au fournisseur avant de continuer.",
